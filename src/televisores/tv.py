@@ -1,12 +1,10 @@
-import Marca
-import Control
 class TV:
     _numTV=0
-    def __init__(self, marca, estado):
-        self._marca = marca
+    def __init__(self, mar, est):
+        self._marca = mar
         self._canal = 1
         self._precio = 500
-        self._estado = estado
+        self._estado = est
         self._volumen = 1
         self._control = None
         TV._numTV += 1
@@ -63,17 +61,17 @@ class TV:
         return self._estado
 
     def canalUp(self):
-        if(self._estado==True and self._canal<120):
+        if(self._estado==True and (self._canal >= 1 and self._canal < 120)):
             self._canal += 1
 
     def canalDown(self):
-        if(self._estado==True and self._canal>1):
+        if(self._estado==True and (self._canal > 1 and self._canal <= 120)):
             self._canal -= 1
 
     def volumenUp(self):
-        if(self._estado==True and self._volumen<7):
+        if(self._estado==True and (self._volumen >= 0 and self._volumen < 7)):
             self._volumen += 1
 
     def volumenDown(self):
-        if(self._estado==True and self._volumen>0):
+        if(self._estado==True and (self._volumen > 0 and self._volumen <= 7)):
             self._volumen -= 1
