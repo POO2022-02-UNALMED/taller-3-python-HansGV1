@@ -3,7 +3,7 @@ class Control:
         self._tv = None
 
     def turnOn(self):
-        self._tv.turnOn()
+        self._tv.turnOn() 
 
     def turnOff(self):
         self._tv.turnOff()
@@ -32,4 +32,3 @@ class Control:
 
     def getTv(self):
         return self._tv
-    
