@@ -12,16 +12,16 @@ class TV:
         self._control = None
         TV._numTV += 1
 
-    def setMarca(self, marca):
-        if isinstance(marca, Marca):
-            self._marca = marca
+    def setMarca(self):
+        if isinstance(self, Marca):
+            self._marca = self
     
     def getMarca(self):
         return self._marca
 
-    def setControl(self, control):
-        if isinstance(control, Control):
-            self._control = control
+    def setControl(self,):
+        if isinstance(self, Control):
+            self._control = self
     
     def getControl(self):
         return self._control
